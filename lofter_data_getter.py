@@ -39,6 +39,7 @@ def get_all_images_url_list(main_lofter_url,is_original = False):
         page_list = get_images_url_list(main_lofter_url+'?page=%i' % page_index, is_original)
         page_index+=1
         if len(page_list)==0:
+            is_last_page = True
             break;
         all_images_url_list+=page_list
     return all_images_url_list
